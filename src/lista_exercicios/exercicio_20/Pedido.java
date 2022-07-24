@@ -18,9 +18,17 @@ public class Pedido {
     public void setListaDeItens(ArrayList<Item> listaDeItens) {
         this.listaDeItens = listaDeItens;
     }
-          
+
+    public double getValorTotalDoPedido() {
+        return valorTotalDoPedido;
+    }
+
+    public void setValorTotalDoPedido(double valorTotalDoPedido) {
+        this.valorTotalDoPedido = valorTotalDoPedido;
+    }           
+    
     public void calculaValorTotal(){
-        valorTotalDoPedido = 0;
+        setValorTotalDoPedido(0);
         listaDeItens.forEach( item -> {
                 item.defineValorTotal();
                 valorTotalDoPedido = valorTotalDoPedido + item.getValorDoItem();
@@ -32,6 +40,7 @@ public class Pedido {
         if(produto.getQuantidadeEmEstoque() >= quantidade){
             Item novoItem = new Item(produto, quantidade);
             listaDeItens.add(novoItem);
+            calculaValorTotal();
             return true;
         }
         else
@@ -41,15 +50,15 @@ public class Pedido {
     public void imprimePedido(){
         listaDeItens.forEach( item ->{
                 System.out.println("Item : " + item.getProduto().getNome());
-                System.out.println("Quantidade :" + item.getQuantidade());
-                System.out.println("Valor do item :" + item.getValorDoItem());
+                System.out.println("Quantidade : " + item.getQuantidade());
+                System.out.println(String.format("Valor do item: R$ %.2f ", item.getValorDoItem()));
             }           
         );
     }
             
     public void imprimeValorTotal(){
-        calculaValorTotal();
-        System.out.println("Valor total do pedido: " + valorTotalDoPedido);
+        
+        System.out.println(String.format("Valor total do pedido: R$ %.2f ", getValorTotalDoPedido()));
     }
            
     //TODO
@@ -88,6 +97,5 @@ public class Pedido {
     public void limparCarrinho(){
         this.listaDeItens.clear();
     }
-                            
-                            
+                                                        
 }

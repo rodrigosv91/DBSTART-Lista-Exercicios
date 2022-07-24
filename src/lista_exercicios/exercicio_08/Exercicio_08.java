@@ -14,7 +14,7 @@ public class Exercicio_08 {
         do{
             System.out.println("Informe o numero: ");
             num = sc.nextInt();
-        }while(num!=10);
+        }while(num != 10);
                
         sc.close();
     }

@@ -39,7 +39,7 @@ public class Menu {
                 mostrarPedido(pedido);
                 break;
             case 5 : 
-                //pagar pedido
+                pagarPedido(pedido, sc);
                 break;
             case 6 : 
                 limparPedido(pedido);
@@ -79,8 +79,35 @@ public class Menu {
         System.out.println("Carrinho limpo.");
     }
     
-    public void pagarPedido(){
+    public void pagarPedido(Pedido pedido, Scanner sc){
+        if(!pedido.getListaDeItens().isEmpty()){
+            System.out.println("Informe o valor fornecido: ");
+            double pagamento = sc.nextDouble();
+            
+            if(pagamento < pedido.getValorTotalDoPedido()){
+                System.out.println("Pagamento insuficiente.");
+            }else{
+                double troco = calculaTroco(pagamento, pedido.getValorTotalDoPedido());
+                calculaNotas(troco);
+            }
         
+        }else
+            System.out.println("Não há items no pedido"); 
+    }
+    
+    
+    public double calculaTroco(double pagamento, double valorPedido){
+        return pagamento - valorPedido;
+    }
+    
+    public void calculaNotas(double troco){
+        System.out.println(String.format("Troco: R$ %.2f ", troco));
+        
+        //calcular notas
+        //limpar pedido ?
+        
+        //ao executar 3 e executar imediatamente 5 há erro > permite pagar com menos valor que necessário
+            //erro: nao calculava valor total do pedido se nao rodase mostrar pedido
     }
     
 }

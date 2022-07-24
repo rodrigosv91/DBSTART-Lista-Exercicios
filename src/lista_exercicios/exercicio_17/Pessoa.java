@@ -49,8 +49,7 @@ public class Pessoa {
             System.out.println("Pessoa: " + this.nome);
         
         if(this.mae != null){
-            System.out.print(" Filho(a) de: " + mae.getNome());
-            
+            System.out.print(" Filho(a) de: " + mae.getNome());           
         }
         
         if( (mae != null) && (pai != null))
@@ -60,10 +59,7 @@ public class Pessoa {
             System.out.print(" Filho(a) de: " + pai.getNome());
             System.out.println();
         }
-        
-        
-        
-        
+
         if(this.mae != null)
             mae.mostrarArvoreGenealogica();
         if(this.pai != null)
