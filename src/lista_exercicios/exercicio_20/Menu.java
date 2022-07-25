@@ -90,8 +90,7 @@ public class Menu {
                 double troco = Calculadora.calculaTroco(pagamento, pedido.getValorTotalDoPedido());
                 Calculadora.calculaNotasEMoedas(troco);
                 pedido.limparCarrinho();
-            }
-        
+            }      
         }else
             System.out.println("Não há items no pedido"); 
     }  
