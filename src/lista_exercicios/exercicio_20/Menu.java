@@ -16,18 +16,19 @@ public class Menu {
         System.out.println("0 - Sair");
     }
     
-    public void mostraEstoque(){
+    public void mostraEstoque(Estoque estoque){
         System.out.println("ESTOQUE:");
-        Estoque.getInstance().imprimeCatalogoDoEstoque();
+        estoque.imprimeCatalogoDoEstoque();
     }
     
     public void switchCase(int opcao, Pedido pedido, Scanner sc){
+        Estoque estoque = Estoque.getInstance();
         switch(opcao){
             case 0 :
                 System.out.println("Encerrando...");
                 break;
             case 1 : 
-                mostraEstoque();
+                mostraEstoque(estoque);
                 break;
             case 2 :
                 adicionaProdutoAoEstoque(sc);               
@@ -52,7 +53,7 @@ public class Menu {
     public void adicionaProdutoAoEstoque(Scanner sc){
         System.out.println("Digite o nome do produto: ");
         String nome = sc.next();
-        System.out.println("Digite o preco do prduto: ");
+        System.out.println("Digite o preco do produto: ");
         double preco = sc.nextDouble();
         System.out.println("Digite a quantidade: ");
         int quantidade = sc.nextInt();

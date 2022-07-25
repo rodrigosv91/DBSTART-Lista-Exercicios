@@ -9,7 +9,6 @@ public class Produto {
     public Produto() {
     }
        
-
     public Produto(int id, String nome, double preco, int quantidadeEmEstoque) {
         this.id = id;
         this.nome = nome;
@@ -47,7 +46,6 @@ public class Produto {
 
     public void setQuantidadeEmEstoque(int quantidadeEmEstoque) {
         this.quantidadeEmEstoque = quantidadeEmEstoque;
-    }
-    
+    }   
     
 }

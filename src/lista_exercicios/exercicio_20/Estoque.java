@@ -41,7 +41,7 @@ public class Estoque {
     }
     
     public boolean cadastrarProduto(Produto produto){
-        if(!this.listaDeProdutos.contains(produto)){
+        if(!this.listaDeProdutos.contains(encontraProduto(produto.getNome()))){
             this.listaDeProdutos.add(produto);
             return true;
         }

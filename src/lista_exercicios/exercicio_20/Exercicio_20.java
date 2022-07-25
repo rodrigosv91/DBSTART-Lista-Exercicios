@@ -2,8 +2,6 @@ package lista_exercicios.exercicio_20;
 
 import java.util.Scanner;
 
-
-
 public class Exercicio_20 {
 
     public static void main(String[] args) {
