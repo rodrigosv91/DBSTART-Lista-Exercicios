@@ -53,7 +53,7 @@ public class Estoque {
         listaDeProdutos.forEach(produto ->{
                 System.out.print("Produto ID: " + produto.getId());
                 System.out.print(" | Produto Nome : " + produto.getNome());
-                System.out.print(" | Preco : " + produto.getPreco());
+                System.out.print(" | Preco : R$ " + produto.getPreco());
                 System.out.print(" | Quantidade em Estoque : " + produto.getQuantidadeEmEstoque() + "\n");              
             }             
         );
