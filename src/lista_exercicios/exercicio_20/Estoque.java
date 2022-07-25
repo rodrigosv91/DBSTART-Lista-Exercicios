@@ -80,6 +80,16 @@ public class Estoque {
         else    
             return false;
     }
+            
+    public void darAltaEmEstoque(String nome, int quantidadeParaDarBaixa){
+        Produto produto = encontraProduto(nome);       
+        produto.setQuantidadeEmEstoque(produto.getQuantidadeEmEstoque() + quantidadeParaDarBaixa);
+    }       
+    
+    public void darAltaEmEstoque(int id, int quantidadeParaDarBaixa){
+        Produto produto = encontraProduto(id);       
+        produto.setQuantidadeEmEstoque(produto.getQuantidadeEmEstoque() + quantidadeParaDarBaixa);
+    } 
     
     public int getQuantidadeAtualEmEstoque(Produto produto){
         return produto.getQuantidadeEmEstoque();

@@ -47,6 +47,19 @@ public class Pedido {
             return false;     
     }
 
+    public void desfazerPedido(){
+        Estoque estoque = Estoque.getInstance();
+        ArrayList<Item> listaDeItensASerRemovidos = new ArrayList<Item>();
+        
+        for(Item item : getListaDeItens()){                          
+            //darAlta no estoque
+            estoque.darAltaEmEstoque(item.getProduto().getNome(), item.getQuantidade());          
+            //remove da lista
+            listaDeItensASerRemovidos.add(item);
+        }           
+        listaDeItens.removeAll(listaDeItensASerRemovidos);
+    }
+    
     public void imprimePedido(){
         listaDeItens.forEach( item ->{
                 System.out.println("Item : " + item.getProduto().getNome());

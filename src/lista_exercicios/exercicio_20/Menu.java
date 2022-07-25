@@ -75,7 +75,8 @@ public class Menu {
             System.out.println("Não há items no pedido");    
     }
     
-    public void limparPedido(Pedido pedido){
+    public void limparPedido(Pedido pedido){      
+        pedido.desfazerPedido();
         pedido.limparCarrinho();
         System.out.println("Carrinho limpo.");
     }
