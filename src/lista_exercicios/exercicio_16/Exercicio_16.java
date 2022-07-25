@@ -35,7 +35,7 @@ public class Exercicio_16 {
         Emprestimo emprestimoTeste = new Emprestimo(new Pessoa("Joe"), new Livro("Mock"), LocalDate.now().minusDays(diasAleatorios), LocalDate.now().minusDays(diasAleatorios).plusDays(15));
         emprestimos.add(emprestimoTeste);
         
-        System.out.println("Dias gerados de devolução: " + diasAleatorios);
+        System.out.println("Dias gerados de devolução: " + diasAleatorios + " ( > 15 = atraso | < 15 = no prazo)");
         
         System.out.println("\n#EMPRESTIMOS: ");
         for(int i = 0;  i < emprestimos.size() ; i++){
@@ -45,13 +45,6 @@ public class Exercicio_16 {
             System.out.println("Data Devolucao Prevista: " + emprestimos.get(i).getDataDevolucaoPrevista().toString());
             emprestimos.get(i).getStatusEmprestimo();
         }
-        /*
-        for(Emprestimo e : emprestimos){
-        }
         
-        emprestimos.forEach((e) -> {
-        });
-        */
-    }
-    
+    }  
 }
