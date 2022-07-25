@@ -13,8 +13,7 @@ public class Exercicio_16 {
             as classes Emprestimo, Livro e Pessoa.
         */
         
-        Scanner sc = new Scanner(System.in);
-        
+        Scanner sc = new Scanner(System.in);      
         ArrayList<Emprestimo> emprestimos = new ArrayList<Emprestimo>();
                
         System.out.println("Informe o nome do livro:");
@@ -27,28 +26,30 @@ public class Exercicio_16 {
         
         Emprestimo emprestimo =  new Emprestimo(pessoa, livro, LocalDate.now(), LocalDate.now().plusDays(15));
         
+        int diasAleatorios = (int) ((Math.random()* 29) +1) ;
+        
+        emprestimo.setDataDevolucaoEfetuada(LocalDate.now().plusDays(diasAleatorios));      
         emprestimos.add(emprestimo);
         
-        System.out.println("#EMPRESTIMOS: ");
+        //Emprestimo teste / Simula um lvro que nao foi devolvido 
+        Emprestimo emprestimoTeste = new Emprestimo(new Pessoa("Joe"), new Livro("Mock"), LocalDate.now().minusDays(diasAleatorios), LocalDate.now().minusDays(diasAleatorios).plusDays(15));
+        emprestimos.add(emprestimoTeste);
+        
+        System.out.println("Dias gerados de devolução: " + diasAleatorios);
+        
+        System.out.println("\n#EMPRESTIMOS: ");
         for(int i = 0;  i < emprestimos.size() ; i++){
-            System.out.println("Livro: " + emprestimos.get(i).getLivro().getNome());
+            System.out.println("\nLivro: " + emprestimos.get(i).getLivro().getNome());
             System.out.println("Pessoa Locadora: " + emprestimos.get(i).getPessoa().getNome());
-            System.out.println("Data Emprestimo: " + emprestimos.get(i).dataEmprestimo.toString());
-            System.out.println("Data Devolucao: " + emprestimos.get(i).dataDevolucao);
+            System.out.println("Data Emprestimo: " + emprestimos.get(i).getDataEmprestimo().toString());
+            System.out.println("Data Devolucao Prevista: " + emprestimos.get(i).getDataDevolucaoPrevista().toString());
+            emprestimos.get(i).getStatusEmprestimo();
         }
         /*
         for(Emprestimo e : emprestimos){
-            System.out.println("Livro: " +  e.getLivro().getNome());
-            System.out.println("Pessoa Locadora: " + e.getPessoa().getNome());
-            System.out.println("Data Emprestimo: " + e.dataEmprestimo.toString());
-            System.out.println("Data Devolucao: " + e.dataDevolucao);
         }
         
         emprestimos.forEach((e) -> {
-            System.out.println("Livro: " + e.getLivro().getNome());
-            System.out.println("Pessoa Locadora: " + e.getPessoa().getNome());
-            System.out.println("Data Emprestimo: " + e.dataEmprestimo.toString());
-            System.out.println("Data Devolucao: " + e.dataDevolucao);
         });
         */
     }
