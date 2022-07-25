@@ -9,7 +9,7 @@ public class Calculadora {
     public static void calculaNotasEMoedas(double troco){
         System.out.println(String.format("\nTroco: R$ %.2f ", troco));
         
-        int notas200, notas100, notas50, notas20, notas10, notas5, notas2, moedas1Real, moedas50Cent, moedas25Cent, moedas10Cent, moedas5Cent, moedas1Cent;
+        int notas200, notas100, notas50, notas20, notas10, notas5, notas2, notas1, moedas50Cent, moedas25Cent, moedas10Cent, moedas5Cent, moedas1Cent;
         
         if(troco >= 200){
             notas200 =  (int) (troco / 200);
@@ -54,9 +54,9 @@ public class Calculadora {
         }
         
         if(troco >= 1){
-            moedas1Real =  (int) (troco / 1);
-            troco = troco - (moedas1Real * 1);  
-            System.out.println("Moedas de R$ 1 : " + moedas1Real);
+            notas1 =  (int) (troco / 1);
+            troco = troco - (notas1 * 1);  
+            System.out.println("Notas de R$ 1 : " + notas1);
         }
              
         //Verifica se há moedas no troco
