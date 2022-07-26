@@ -27,7 +27,7 @@ public class Exercicio_07_refatorado_apos_09 {
         numeroEscolhido = sc.nextInt();
                
         for (int i = 0; i <= numeroEscolhido ; i++){
-        
+         
             if(i == 0){               
                 System.out.print( ultimo + " ");
                 if(numeroEscolhido == 0)

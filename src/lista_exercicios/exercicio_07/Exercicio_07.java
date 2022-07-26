@@ -33,7 +33,7 @@ public class Exercicio_07 {
                 System.out.print(i + " ");  
                 ultimo = 0;
             }
-            if(i == 1){
+            if(i == 1){ 
                 System.out.print(i + " ");
                 numGeradoDaSoma = ultimo + i;
                 ultimo = numGeradoDaSoma;                
