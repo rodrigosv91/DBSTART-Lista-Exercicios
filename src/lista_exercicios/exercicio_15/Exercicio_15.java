@@ -42,7 +42,7 @@ public class Exercicio_15 {
             default:
                 System.out.println("Opcao invalida");
         }
-        
+         
         sc.close();
     }
     
