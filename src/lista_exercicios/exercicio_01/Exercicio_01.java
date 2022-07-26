@@ -12,13 +12,13 @@ public class Exercicio_01 {
         
         Scanner sc = new Scanner(System.in);
         
-        System.out.println("Informe a idade:");
+        System.out.println("Informe a idade da pessoa:");
         int idade = sc.nextInt();
         
         if(idade < 18)
-            System.out.println("Menor de idade");
+            System.out.println("Pessoa menor de idade");
         else
-            System.out.println("Maior de idade");
+            System.out.println("Pessoa maior de idade");
         
         sc.close();
     }   
