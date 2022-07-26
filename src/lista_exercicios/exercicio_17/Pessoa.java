@@ -45,25 +45,25 @@ public class Pessoa {
     }
     
     public void mostrarArvoreGenealogica(){
-        if( (mae != null) || (pai != null))
+        if( (this.mae != null) || (this.pai != null))
             System.out.println("Pessoa: " + this.nome);
         
         if(this.mae != null){
-            System.out.print(" Filho(a) de: " + mae.getNome());           
+            System.out.print(" Filho(a) de: " + this.mae.getNome());           
         }
         
-        if( (mae != null) && (pai != null))
+        if( (this.mae != null) && (this.pai != null))
             System.out.print(" e");
         
         if(this.pai != null){
-            System.out.print(" Filho(a) de: " + pai.getNome());
+            System.out.print(" Filho(a) de: " + this.pai.getNome());
             System.out.println();
         }
 
         if(this.mae != null)
-            mae.mostrarArvoreGenealogica();
+            this.mae.mostrarArvoreGenealogica();
         if(this.pai != null)
-            pai.mostrarArvoreGenealogica();
+            this.pai.mostrarArvoreGenealogica();
         
     }
 }

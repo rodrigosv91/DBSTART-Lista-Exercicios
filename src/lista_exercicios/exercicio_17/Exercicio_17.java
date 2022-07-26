@@ -46,5 +46,5 @@ public class Exercicio_17 {
         
         filho.mostrarArvoreGenealogica();
     }
-    
+   
 }
