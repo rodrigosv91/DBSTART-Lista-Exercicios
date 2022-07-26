@@ -29,7 +29,7 @@ public class Exercicio_14 {
         if(tempo >= 60){
             minutos = tempo /60;
             tempo = tempo % 60;
-        }
+        } 
                
         System.out.println(formataTempo(horasToString(horas), minutosToString(minutos), segundosToString(tempo)));
         
