@@ -37,7 +37,7 @@ public class Exercicio_10 {
             System.out.println();
         }
         
-        System.out.println("Soma da diagonal principal: "  + soma);
+        System.out.println("\nSoma da diagonal principal: "  + soma);
  
     }
     
