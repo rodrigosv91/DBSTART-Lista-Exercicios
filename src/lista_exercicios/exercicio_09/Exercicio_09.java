@@ -20,7 +20,7 @@ public class Exercicio_09 {
         Scanner sc = new Scanner(System.in);             
         
         System.out.println("Informe o numero a ser calculada a funcao:");
-        numeroEscolhido = sc.nextInt();
+        numeroEscolhido = sc.nextInt(); 
         
         int i = 0;
         
@@ -48,6 +48,5 @@ public class Exercicio_09 {
         }
         
         sc.close();
-    }
-    
+    } 
 }
