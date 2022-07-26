@@ -13,7 +13,7 @@ public class Exercicio_06 {
     
         for(int i = 0; i<10; i++){
             //(int) ((Math.random() * (max - min)) + min)
-            numeros[i] = (int) ( Math.random() * 100 );
+            numeros[i] = (int) ( Math.random() * 100 ); 
         }
         
         int menor = numeros[0];
