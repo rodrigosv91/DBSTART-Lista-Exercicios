@@ -26,12 +26,12 @@ public class Exercicio_02 {
         double preco = sc.nextDouble();
         
         System.out.println("Informe a quantidade");
-        double quantidade = sc.nextDouble();
+        int quantidade = sc.nextInt();
         
         double valorBase = quantidade*preco;
-        double desconto = 0; // inicializacao necessária
+        double desconto;
         
-        if(quantidade < 10)
+        if(quantidade <= 10)
             desconto = 0;
         else 
             if(quantidade <= 20)
