@@ -23,7 +23,7 @@ public class Exercicio_04 {
         System.out.println("Digite o primeiro valor");
         double valor1 = sc.nextDouble();
         System.out.println("Digite o segundo valor");
-        double valor2 = sc.nextDouble();
+        double valor2 = sc.nextDouble(); 
         
         switch (opcao){
             case 1: 
