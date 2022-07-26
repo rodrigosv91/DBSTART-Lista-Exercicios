@@ -31,7 +31,7 @@ public class Exercicio_13 {
          System.out.println("Informe a nota do trabalho:");
          trabalho = sc.nextDouble();
          
-         media =  calculaMedia(prova1, prova2, trabalho);
+         media = calculaMedia(prova1, prova2, trabalho);
          
          System.out.println("Media = " + media);
          informaStatusAluno(media);              
