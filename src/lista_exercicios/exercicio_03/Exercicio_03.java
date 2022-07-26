@@ -22,10 +22,10 @@ public class Exercicio_03 {
         String[] jogadas = {"PEDRA", "PAPEL", "TESOURA"};
         
         //gera numero entre zero e um 
-        //multiplica por 2 (resultado entre 0 e 1.9)
+        //multiplica por 3 (resultado entre 0 e 2.9 | + 1)
         //cast da part inteira para int
-        int jogadaMaquina = (int) ( (Math.random() * 2) + 1);
-        
+        int jogadaMaquina = (int) ( (Math.random() * 3) + 1);
+       
         if(jogadaMaquina == jogadaUsuario)
             System.out.println("EMPATE");
         else
@@ -48,7 +48,7 @@ public class Exercicio_03 {
                 System.out.println("USUARIO VENCE");
                 
         System.out.println("Você jogou: " + jogadas[jogadaUsuario-1]);
-        System.out.println("Maquina jogou :" + jogadas[jogadaMaquina-1]);            
+        System.out.println("Maquina jogou: " + jogadas[jogadaMaquina-1]);            
         
         sc.close();  
     }
