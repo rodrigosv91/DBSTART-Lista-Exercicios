@@ -30,9 +30,9 @@ public class Exercicio_11 {
                     vetor[j+1] = valorTemporario;
                 
                 }
-            }
+            } 
         //Mostra vetor ordenado        
-        System.out.println("Vetor ordenado");
+        System.out.println("\nVetor ordenado");
         for(int i = 0; i < TAMANHO; i++)
             System.out.print(vetor[i] + " ");       
     }
