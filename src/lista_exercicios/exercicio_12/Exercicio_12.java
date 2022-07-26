@@ -50,7 +50,7 @@ public class Exercicio_12 {
                 vetorCombinado[i] = vetor2[j];
                 j++;
             }      
-        }
+        } 
         
         //Ordena e mostra vetor combinado
         System.out.println("\n\nVetor combinado:");
