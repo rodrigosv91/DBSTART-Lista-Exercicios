@@ -19,7 +19,7 @@ public class Exercicio_07_solucao_array {
         System.out.println("Informe o numero a ser calculada a funcao:");
         int numeroEscolhido = sc.nextInt();
         
-        int[] arrayFib =  new int[numeroEscolhido];
+        int[] arrayFib =  new int[numeroEscolhido+1];
         
         // define pos 0 e 1       
         // percore guardando soma de n-1 + n-2 em n
