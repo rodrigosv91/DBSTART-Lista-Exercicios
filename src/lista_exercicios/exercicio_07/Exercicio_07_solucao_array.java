@@ -22,7 +22,7 @@ public class Exercicio_07_solucao_array {
         int[] arrayFib =  new int[numeroEscolhido+1];
         
         // define pos 0 e 1       
-        // percore guardando soma de n-1 + n-2 em n
+        // percore guardando soma de n-1 e n-2 em n
         // mostra n
         
         arrayFib[0] = 0;
