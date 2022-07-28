@@ -9,7 +9,7 @@ Usar if-else
 1) Definir a idade de uma pessoa e verificar se ela é maior de idade ou
 não.
 ```
-[Exercício 02 >](src/lista_exercicios/exercicio_02)
+[Exercício 02 >](src/lista_exercicios/src/exercicio_02)
 ```
 2) Para cada produto informado (nome, preço e quantidade), escreva o
 nome do produto comprado e o valor total a ser pago, considerando

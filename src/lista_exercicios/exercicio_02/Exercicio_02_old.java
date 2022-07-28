@@ -2,7 +2,7 @@ package lista_exercicios.exercicio_02;
 
 import java.util.Scanner;
 
-public class Exercicio_02 {
+public class Exercicio_02_old {
 
     public static void main(String[] args) {     
         /*
@@ -29,14 +29,18 @@ public class Exercicio_02 {
         int quantidade = sc.nextInt();
         
         double valorBase = quantidade*preco;
-        double desconto = 0;
+        double desconto;
         
-        if(quantidade > 10 && quantidade <= 20)
-                desconto = valorBase * 0.10 ;       
-        if(quantidade > 20 && quantidade <= 50)
-                desconto = valorBase * 0.2;      
-        if(quantidade > 50)
-                desconto = valorBase * 0.25;
+        if(quantidade <= 10)
+            desconto = 0;
+        else 
+            if(quantidade <= 20)
+                desconto = valorBase * 0.10 ;
+        else 
+            if(quantidade <= 50)
+                desconto = valorBase * 0.2;
+        else
+            desconto = valorBase * 0.25;
         
         System.out.println("Produto: " + nome);
         System.out.println("Valor Total: " + ( valorBase - desconto));

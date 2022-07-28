@@ -43,8 +43,7 @@ public class extra_01 {
                 copia_string = copia_string + "#";
             }          
             //retorna uma substring apartir dos 4 ultimos caracteres
-            copia_string = copia_string + string.substring((string.length() - 4), string.length());
-            
+            copia_string = copia_string + string.substring((string.length() - 4), string.length());          
             return copia_string;
         }
     }   
