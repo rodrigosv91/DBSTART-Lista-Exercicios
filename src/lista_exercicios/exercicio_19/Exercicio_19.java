@@ -6,6 +6,11 @@ import java.util.Scanner;
 public class Exercicio_19 {
 
     public static void main(String[] args) {
+        
+        /*
+        19) Implemente um sistema de agenda telefônica. Faça (ao menos) 
+            as interações de adicionar e deletar números.
+        */
                 
         ArrayList<Contato> contatos = new ArrayList<Contato>();
         
