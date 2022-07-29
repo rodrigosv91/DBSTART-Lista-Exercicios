@@ -10,8 +10,7 @@ public class Exercicio_03 {
         3) Implemente um jogo Jokenpo (Pedra, papel ou tesoura). Será o 
             jogador contra a máquina. O código tem que gerar as posições 
             aleatoriamente e comparar com o que escolhemos.
-        */
-        System.out.println((int) 1.1);
+        */       
         Scanner sc = new Scanner(System.in);
                
         System.out.println("Digite: 1 para PEDRA | 2 para PAPEL | 3 para TESOURA");

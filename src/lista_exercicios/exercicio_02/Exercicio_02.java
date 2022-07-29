@@ -19,13 +19,13 @@ public class Exercicio_02 {
         
         final int VALOR_DESCONTO_BASE = 0;
         
-        final int QUANTIDADE_PRODUTO_PARA_DESCONTO_MINIMO = 10;
+        final int QUANTIDADE_PRODUTO_PARA_DESCONTO_MINIMO = 11;
         final int QUANTIDADE_PRODUTO_PARA_DESCONTO_MEDIO = 21;
-        final int QUANTIDADE_PRODUTO_PARA_DESCONTO_MAXIMO = 50;
+        final int QUANTIDADE_PRODUTO_PARA_DESCONTO_MAXIMO = 51;
         
-        final double DESCONTO_MINIMO = 0.10;
-        final double DESCONTO_MEDIO = 0.20;
-        final double DESCONTO_MAXIMO = 0.25;
+        final double VALOR_DESCONTO_MINIMO = 0.10;
+        final double VALOR_DESCONTO_MEDIO = 0.20;
+        final double VALOR_DESCONTO_MAXIMO = 0.25;
          
         Scanner sc = new Scanner(System.in);
         
@@ -41,12 +41,12 @@ public class Exercicio_02 {
         final double VALOR_PRODUTO_BASE = quantidade_produto * preco_produto;
         double desconto_produto = VALOR_DESCONTO_BASE;
         
-        if(quantidade_produto > QUANTIDADE_PRODUTO_PARA_DESCONTO_MINIMO && quantidade_produto < QUANTIDADE_PRODUTO_PARA_DESCONTO_MEDIO)
-                desconto_produto = VALOR_PRODUTO_BASE * DESCONTO_MINIMO ;       
+        if(quantidade_produto >= QUANTIDADE_PRODUTO_PARA_DESCONTO_MINIMO && quantidade_produto < QUANTIDADE_PRODUTO_PARA_DESCONTO_MEDIO)
+                desconto_produto = VALOR_PRODUTO_BASE * VALOR_DESCONTO_MINIMO ;       
         if(quantidade_produto >= QUANTIDADE_PRODUTO_PARA_DESCONTO_MEDIO && quantidade_produto < QUANTIDADE_PRODUTO_PARA_DESCONTO_MAXIMO)
-                desconto_produto = VALOR_PRODUTO_BASE * DESCONTO_MEDIO;      
+                desconto_produto = VALOR_PRODUTO_BASE * VALOR_DESCONTO_MEDIO;      
         if(quantidade_produto >= QUANTIDADE_PRODUTO_PARA_DESCONTO_MAXIMO)
-                desconto_produto = VALOR_PRODUTO_BASE * DESCONTO_MAXIMO;
+                desconto_produto = VALOR_PRODUTO_BASE * VALOR_DESCONTO_MAXIMO;
         
         System.out.println("Produto: " + nome_produto);
         System.out.println("Valor Total: " + ( VALOR_PRODUTO_BASE - desconto_produto));
