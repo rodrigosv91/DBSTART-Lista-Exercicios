@@ -11,12 +11,14 @@ public class Exercicio_03 {
             jogador contra a máquina. O código tem que gerar as posições 
             aleatoriamente e comparar com o que escolhemos.
         */       
+        final int VALOR_MAX = 3;
+        final int VALOR_MIN = 1;
         Scanner sc = new Scanner(System.in);
         String[] jogadas = {"PEDRA", "PAPEL", "TESOURA"};          
         System.out.println("Digite: 1 para PEDRA | 2 para PAPEL | 3 para TESOURA");
         System.out.println("Informe a jogada:");      
         int jogadaUsuario = sc.nextInt();                   
-        int jogadaMaquina = (int) ( (Math.random() * 3) + 1);
+        int jogadaMaquina = (int) ( (Math.random() * VALOR_MAX) + VALOR_MIN);
                    
         if(jogadaMaquina == jogadaUsuario){
             System.out.println("EMPATE");

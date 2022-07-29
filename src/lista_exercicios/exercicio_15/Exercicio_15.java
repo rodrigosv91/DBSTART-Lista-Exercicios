@@ -25,7 +25,7 @@ public class Exercicio_15 {
         double valor1 = sc.nextDouble();
         System.out.println("Digite o segundo valor:");
         double valor2 = sc.nextDouble();
-                
+                 
         switch (opcao){
             case 1: 
                 Calculadora.somar(valor1, valor2);
