@@ -183,3 +183,18 @@ calcule a menor quantidade de notas. (difícil)
   <img src="https://i.imgur.com/L6lmOY8.jpg" width="100%">
 </p>
 
+# Extra
+
+[Exercício Extra 01 >](src/lista_exercicios/extra_01)
+
+```
+ Write a function maskify, which changes all but the last four characters into '#'
+            Examples:
+                Input: 	
+                    "4556364607934874"  
+                Output: 
+                    "############4874" 	
+            Guaranteed Constraints:
+                The input string will never be null or undefined.
+            Returns: String			
+```			
