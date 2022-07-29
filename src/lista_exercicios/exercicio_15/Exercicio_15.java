@@ -12,27 +12,25 @@ public class Exercicio_15 {
             Para fazer a escolha das operações use como base o exercício 4
         */        
         Scanner sc = new Scanner(System.in);               
-        System.out.println("Calculadora");
-        System.out.println("OPCOES: 1 SOMAR | 2 SUBTRAIR | 3 MULTIPLICAR | 4 DIVIDIR");
-        System.out.println("\nDigite a operacao que deseja executar:");
-        int opcao = sc.nextInt();
-        System.out.println("Digite o primeiro valor:");
-        double primeiro_numero = sc.nextDouble();
-        System.out.println("Digite o segundo valor:");
-        double segundo_numero = sc.nextDouble();
+        Calculadora.mostraCabecalho();
+        int opcao = Reader.leOpcao(sc);
+        System.out.println("Digite o primeiro termo:");
+        double primeiro_termo = Reader.leTermo(sc);
+        System.out.println("Digite o segundo termo:");
+        double segundo_termo = Reader.leTermo(sc);
                  
         switch (opcao){
             case 1: 
-                Calculadora.somar(primeiro_numero, segundo_numero);
+                Calculadora.somar(primeiro_termo, segundo_termo);
                 break;
             case 2:
-                Calculadora.subtrair(primeiro_numero, segundo_numero);
+                Calculadora.subtrair(primeiro_termo, segundo_termo);
                 break;
             case 3:
-                Calculadora.multiplicar(primeiro_numero, segundo_numero);
+                Calculadora.multiplicar(primeiro_termo, segundo_termo);
                 break;
             case 4:
-                Calculadora.dividir(primeiro_numero, segundo_numero);
+                Calculadora.dividir(primeiro_termo, segundo_termo);
                 break;
             default:
                 System.out.println("Opcão invalida");
