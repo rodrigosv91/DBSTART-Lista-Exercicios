@@ -16,7 +16,7 @@ public class Exercicio_15 {
         Scanner sc = new Scanner(System.in);
                 
         System.out.println("Calculadora");
-        System.out.println("Opcoes: 1 somar | 2 subtrair | 3 multiplicar | 4 dividir");
+        System.out.println("OPCOES: 1 SOMAR | 2 SUBTRAIR | 3 MULTIPLICAR | 4 DIVIDIR");
         System.out.println("\nDigite a operacao que deseja executar:");
     
         int opcao = sc.nextInt();
@@ -41,9 +41,7 @@ public class Exercicio_15 {
                 break;
             default:
                 System.out.println("Opcao invalida");
-        }
-         
+        }        
         sc.close();
-    }
-    
+    }   
 }

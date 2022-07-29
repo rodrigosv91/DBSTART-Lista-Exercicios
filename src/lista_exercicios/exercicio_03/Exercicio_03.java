@@ -12,44 +12,25 @@ public class Exercicio_03 {
             aleatoriamente e comparar com o que escolhemos.
         */       
         Scanner sc = new Scanner(System.in);
-               
+        String[] jogadas = {"PEDRA", "PAPEL", "TESOURA"};          
         System.out.println("Digite: 1 para PEDRA | 2 para PAPEL | 3 para TESOURA");
-        System.out.println("Informe a jogada:");
-        
-        int jogadaUsuario = sc.nextInt();
-        
-        String[] jogadas = {"PEDRA", "PAPEL", "TESOURA"};
-        
-        //gera numero entre zero e um 
-        //multiplica por 3 (resultado entre 0 e 2.9 | + 1)
-        //cast da part inteira para int
+        System.out.println("Informe a jogada:");      
+        int jogadaUsuario = sc.nextInt();                   
         int jogadaMaquina = (int) ( (Math.random() * 3) + 1);
-       
-        if(jogadaMaquina == jogadaUsuario)
+                   
+        if(jogadaMaquina == jogadaUsuario){
             System.out.println("EMPATE");
-        else
-            if(jogadaUsuario == 1 && jogadaMaquina == 2)
+        }
+        else 
+            if((jogadaUsuario == 1 && jogadaMaquina == 2) || (jogadaUsuario == 2 && jogadaMaquina == 3) || (jogadaUsuario == 3 && jogadaMaquina == 1))
                 System.out.println("USUARIO PERDE");
-        else
-            if(jogadaUsuario == 2 && jogadaMaquina == 3)
-                System.out.println("USUARIO PERDE");
-        else
-            if(jogadaUsuario == 3 && jogadaMaquina == 1)
-                System.out.println("USUARIO PERDE");
-        else
-            if(jogadaUsuario == 2 && jogadaMaquina == 1)
-                System.out.println("USUARIO VENCE");
-        else
-            if(jogadaUsuario == 3 && jogadaMaquina == 2)
-                System.out.println("USUARIO VENCE");
-        else
-            if(jogadaUsuario == 1 && jogadaMaquina == 3)
-                System.out.println("USUARIO VENCE");
-                
+        else{
+            System.out.println("USUARIO VENCE");
+        }
+        
         System.out.println("Você jogou: " + jogadas[jogadaUsuario-1]);
         System.out.println("Maquina jogou: " + jogadas[jogadaMaquina-1]);            
         
-        sc.close();  
-    }
-    
+        sc.close(); 
+    } 
 }
