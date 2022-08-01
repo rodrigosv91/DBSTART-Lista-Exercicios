@@ -13,6 +13,9 @@ public class Exercicio_03 {
         */       
         final int VALOR_MAX = 3;
         final int VALOR_MIN = 1;
+        final int VALOR_JOGADA_PEDRA = 1;
+        final int VALOR_JOGADA_PAPEL = 2;
+        final int VALOR_JOGADA_TESOURA = 3;
         Scanner sc = new Scanner(System.in);
         String[] jogadas = {"PEDRA", "PAPEL", "TESOURA"};          
         System.out.println("Digite: 1 para PEDRA | 2 para PAPEL | 3 para TESOURA");
@@ -24,7 +27,7 @@ public class Exercicio_03 {
             System.out.println("EMPATE");
         }
         else 
-            if((jogadaUsuario == 1 && jogadaMaquina == 2) || (jogadaUsuario == 2 && jogadaMaquina == 3) || (jogadaUsuario == 3 && jogadaMaquina == 1))
+            if((jogadaUsuario == VALOR_JOGADA_PEDRA && jogadaMaquina == VALOR_JOGADA_PAPEL) || (jogadaUsuario == VALOR_JOGADA_PAPEL && jogadaMaquina == VALOR_JOGADA_TESOURA) || (jogadaUsuario == VALOR_JOGADA_TESOURA && jogadaMaquina == VALOR_JOGADA_PEDRA))
                 System.out.println("USUARIO PERDE");
         else{
             System.out.println("USUARIO VENCE");
