@@ -7,11 +7,11 @@ public class  Calculadora {
     }
     
     public static void subtrair(double primeiro_termo, double segundo_termo){
-        System.out.println("Soma = " + (primeiro_termo - segundo_termo));
+        System.out.println("Subtração = " + (primeiro_termo - segundo_termo));
     }
     
     public static void multiplicar(double primeiro_termo, double segundo_termo){
-        System.out.println("Soma = " + (primeiro_termo * segundo_termo));
+        System.out.println("Multiplicação = " + (primeiro_termo * segundo_termo));
     }
     
     public static void dividir(double primeiro_termo, double segundo_termo){
