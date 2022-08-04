@@ -36,6 +36,6 @@ public class Exercicio_03 {
         System.out.println("Você jogou: " + jogadas[jogadaUsuario-1]);
         System.out.println("Maquina jogou: " + jogadas[jogadaMaquina-1]);            
         
-        sc.close(); 
+        sc.close();  
     } 
 }
