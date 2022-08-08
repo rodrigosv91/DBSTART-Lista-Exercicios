@@ -11,7 +11,7 @@ public class  Calculadora {
     }
     
     public static void multiplicar(double primeiro_termo, double segundo_termo){
-        System.out.println("Multiplicação = " + (primeiro_termo * segundo_termo));
+        System.out.println("Multiplicação = " + (primeiro_termo * segundo_termo)); 
     }
     
     public static void dividir(double primeiro_termo, double segundo_termo){
