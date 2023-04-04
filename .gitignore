@@ -5,3 +5,6 @@ build/
 manifest.mf
 nbproject/
 README.md.bak
+/out/
+/.gradle/
+/.idea/
