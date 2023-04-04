@@ -11,15 +11,16 @@ public class Exercicio_01 {
         */
         
         Scanner sc = new Scanner(System.in);
-        
         System.out.println("Informe a idade da pessoa:");
         int idade = sc.nextInt();
-        
-        if(idade < 18)
-            System.out.println("Pessoa menor de idade");
-        else
-            System.out.println("Pessoa maior de idade");
-        
+        System.out.println(testaSeEhMaiorOuMenorDeIdade(idade));
         sc.close();
-    }   
+    }
+
+    public static String testaSeEhMaiorOuMenorDeIdade(int idade){
+        if(idade < 18)
+           return "Pessoa menor de idade";
+        else
+            return "Pessoa maior de idade";
+    }
 }
